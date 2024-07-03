@@ -1,0 +1,191 @@
+
+:root
+{
+    --primary-clr-800: hsl(0, 0%, 7%);
+    --primary-clr-600: hsl(0, 0%, 50%);
+    --primary-clr-400: hsl(47, 88%, 63%);
+    --primary-clr-200: hsl(0, 0%, 100%);
+
+    --fs-400: 16px;
+
+    --ff-figtree: 'Figtree' , sans-serif;
+
+    --fw-800: 800;
+    --fw-500: 500;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-figtree);
+    font-size: var(--fs-400);
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* ==== CSS UTILITIES ==== */
+
+.txt-clr-800 { color: var(--primary-clr-800);}
+.txt-clr-600 { color: var(--primary-clr-600);}
+.txt-clr-400 { color: var(--primary-clr-400);}
+.txt-clr-200 { color: var(--primary-clr-200);}
+
+.fw-800 { font-weight: var(--fw-800);}
+.fw-500 { font-weight: var(--fw-500);}
+
+/* ==== CSS STYLING ==== */
+
+body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-clr-400);
+}
+
+.box-ad
+{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    width: 400px;
+    background-color: var(--primary-clr-200);
+    border-radius: 15px;
+    border: 2px solid var(--primary-clr-800);
+    box-shadow: 10px 10px 20px var(--primary-clr-800);
+}
+
+.box-ad .col
+{
+    margin-inline: auto;
+}
+
+.col img
+{
+    margin-top: 2rem;
+}
+
+.box-ad .col:nth-child(2)
+{
+    padding: 2rem;
+}
+
+.col .inner-text
+{
+    margin-bottom: .9rem;
+}
+
+.inner-text:first-of-type p
+{
+    background-color: var(--primary-clr-400);
+    width: auto;
+}
+
+.col .inner-text:nth-of-type(2)
+{
+    font-size: 4rem;
+}
+
+.box-ad .col:nth-child(3)
+{
+    display: flex;
+    margin-top: 0;
+    gap: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.box-ad .col img:nth-last-child(2)
+{
+    width: 2rem;
+    position: relative;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.box-ad .user p
+{
+    align-self: center;
+    justify-self: center;
+}
+
+

@@ -14,6 +14,12 @@
     --fw-500: 500;
 }
 
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf');
+    url('assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -130,7 +136,7 @@ body
     background-color: var(--primary-clr-200);
     border-radius: 15px;
     border: 2px solid var(--primary-clr-800);
-    box-shadow: 10px 10px 20px var(--primary-clr-800);
+    box-shadow: 15px 15px;
 }
 
 .box-ad .col
@@ -156,12 +162,19 @@ body
 .inner-text:first-of-type p
 {
     background-color: var(--primary-clr-400);
-    width: auto;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 10px;
 }
 
 .col .inner-text:nth-of-type(2)
 {
     font-size: 4rem;
+}
+
+.col .inner-text:nth-of-type(3) p
+{
+    font-size: 1.5rem;
 }
 
 .box-ad .col:nth-child(3)
@@ -174,18 +187,20 @@ body
     bottom: 0;
 }
 
-.box-ad .col img:nth-last-child(2)
+.box-ad .user img
 {
+    display: flex;
     width: 2rem;
     position: relative;
     margin-left: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .box-ad .user p
 {
     align-self: center;
     justify-self: center;
+    margin-top: 1rem;
 }
 
 
